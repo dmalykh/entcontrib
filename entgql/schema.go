@@ -97,6 +97,7 @@ type schemaGenerator struct {
 	path          string
 	relaySpec     bool
 	genSchema     bool
+	genEmptyQuery bool	
 	genWhereInput bool
 	genMutations  bool
 
@@ -249,11 +250,18 @@ func (e *schemaGenerator) buildTypes(g *gen.Graph, s *ast.Schema) error {
 		}
 	}
 
-	if e.genSchema && len(queryFields) > 0 {
+	if e.genSchema && len(queryFields) > 0 && e.genEmptyQuery == false {
 		s.AddTypes(&ast.Definition{
 			Name:   QueryType,
 			Kind:   ast.Object,
 			Fields: queryFields,
+		})
+	}
+
+	if e.genSchema && len(queryFields) > 0 && e.genEmptyQuery == false {
+		s.AddTypes(&ast.Definition{
+			Name:   QueryType,
+			Kind:   ast.Object,
 		})
 	}
 

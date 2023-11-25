@@ -115,6 +115,14 @@ func WithConfig(cfg *config.Config) ExtensionOption {
 	}
 }
 
+// WithCompletedConfig injects the parsed gqlgen.yml configuration to the global annotations.
+func WithCompletedConfig(cfg *config.Config) ExtensionOption {
+	return func(ex *Extension) (err error) {
+		ex.cfg = cfg
+		return nil
+	}
+}
+
 // WithTemplates overrides the default templates (entgql.AllTemplates)
 // with specific templates.
 func WithTemplates(templates ...*gen.Template) ExtensionOption {

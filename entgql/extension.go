@@ -193,6 +193,15 @@ func WithSchemaGenerator() ExtensionOption {
 	}
 }
 
+// WithEmptyQueryGenerator add a hook for generate empty Query in GQL schema
+func WithEmptyQueryGenerator() ExtensionOption {
+	return func(e *Extension) error {
+		e.genEmptyQuery = true
+		return nil
+	}
+}
+
+
 // WithMapScalarFunc allows users to provide a custom function that
 // maps an ent.Field (*gen.Field) into its GraphQL scalar type. If the
 // function returns an empty string, the extension fallbacks to its

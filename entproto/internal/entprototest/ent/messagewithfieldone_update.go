@@ -7,11 +7,11 @@ import (
 	"errors"
 	"fmt"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/messagewithfieldone"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/messagewithfieldone"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/predicate"
 )
 
 // MessageWithFieldOneUpdate is the builder for updating MessageWithFieldOne entities.

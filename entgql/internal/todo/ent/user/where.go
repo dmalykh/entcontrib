@@ -17,9 +17,9 @@
 package user
 
 import (
-	"entgo.io/contrib/entgql/internal/todo/ent/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/dmalykh/entcontrib/entgql/internal/todo/ent/predicate"
 	"github.com/google/uuid"
 )
 

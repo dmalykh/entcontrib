@@ -5,11 +5,11 @@ package ent
 import (
 	"context"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/predicate"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withfields"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/schemast/internal/mutatetest/ent/predicate"
+	"github.com/dmalykh/entcontrib/schemast/internal/mutatetest/ent/withfields"
 )
 
 // WithFieldsDelete is the builder for deleting a WithFields entity.

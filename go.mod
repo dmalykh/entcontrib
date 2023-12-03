@@ -1,4 +1,4 @@
-module entgo.io/contrib
+module github.com/dmalykh/entcontrib
 
 go 1.20
 

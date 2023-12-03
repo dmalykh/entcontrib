@@ -19,9 +19,9 @@ package ent
 import (
 	"context"
 
-	"entgo.io/contrib/entgql"
-	"entgo.io/contrib/entgql/internal/todofed/ent/category"
-	"entgo.io/contrib/entgql/internal/todofed/ent/todo"
+	"github.com/dmalykh/entcontrib/entgql"
+	"github.com/dmalykh/entcontrib/entgql/internal/todofed/ent/category"
+	"github.com/dmalykh/entcontrib/entgql/internal/todofed/ent/todo"
 	"entgo.io/ent/dialect/sql"
 	"github.com/99designs/gqlgen/graphql"
 )

@@ -7,11 +7,11 @@ import (
 	"errors"
 	"fmt"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/blogpost"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/category"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/user"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/blogpost"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/category"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/user"
 )
 
 // BlogPostCreate is the builder for creating a BlogPost entity.

@@ -19,17 +19,17 @@ import (
 	"net/http"
 	"time"
 
-	"entgo.io/contrib/entgql"
-	todopulid "entgo.io/contrib/entgql/internal/todopulid"
-	"entgo.io/contrib/entgql/internal/todopulid/ent"
-	"entgo.io/contrib/entgql/internal/todopulid/ent/todo"
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/handler/debug"
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/alecthomas/kong"
+	"github.com/dmalykh/entcontrib/entgql"
+	todopulid "github.com/dmalykh/entcontrib/entgql/internal/todopulid"
+	"github.com/dmalykh/entcontrib/entgql/internal/todopulid/ent"
+	"github.com/dmalykh/entcontrib/entgql/internal/todopulid/ent/todo"
 	"go.uber.org/zap"
 
-	_ "entgo.io/contrib/entgql/internal/todopulid/ent/runtime"
+	_ "github.com/dmalykh/entcontrib/entgql/internal/todopulid/ent/runtime"
 	_ "github.com/mattn/go-sqlite3"
 )
 

@@ -11,9 +11,9 @@ import (
 	"sync"
 	"time"
 
-	"entgo.io/contrib/entoas/internal/oastypes/oastypes"
-	"entgo.io/contrib/entoas/internal/oastypes/predicate"
-	"entgo.io/contrib/entoas/internal/oastypes/schema"
+	"github.com/dmalykh/entcontrib/entoas/internal/oastypes/oastypes"
+	"github.com/dmalykh/entcontrib/entoas/internal/oastypes/predicate"
+	"github.com/dmalykh/entcontrib/entoas/internal/oastypes/schema"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"github.com/google/uuid"

@@ -7,12 +7,12 @@ import (
 	"errors"
 	"fmt"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/blogpost"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/category"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/blogpost"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/category"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/predicate"
 )
 
 // CategoryUpdate is the builder for updating Category entities.

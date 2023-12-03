@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"sync"
 
-	"entgo.io/contrib/schemast/internal/printtest/ent/predicate"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/schemast/internal/printtest/ent/predicate"
 )
 
 const (

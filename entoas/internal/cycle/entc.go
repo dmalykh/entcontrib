@@ -20,7 +20,7 @@ package main
 import (
 	"log"
 
-	"entgo.io/contrib/entoas"
+	"github.com/dmalykh/entcontrib/entoas"
 	"entgo.io/ent/entc"
 	"entgo.io/ent/entc/gen"
 )

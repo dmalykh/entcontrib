@@ -9,11 +9,11 @@ import (
 	"reflect"
 	"sync"
 
-	"entgo.io/contrib/schemast/internal/printtest/ent/message"
-	"entgo.io/contrib/schemast/internal/printtest/ent/user"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/dmalykh/entcontrib/schemast/internal/printtest/ent/message"
+	"github.com/dmalykh/entcontrib/schemast/internal/printtest/ent/user"
 )
 
 // ent aliases to avoid import conflicts in user's code.

@@ -19,8 +19,8 @@ package ent
 import (
 	"context"
 
-	"entgo.io/contrib/entgql/internal/todogotype/ent/predicate"
-	"entgo.io/contrib/entgql/internal/todogotype/ent/verysecret"
+	"github.com/dmalykh/entcontrib/entgql/internal/todogotype/ent/predicate"
+	"github.com/dmalykh/entcontrib/entgql/internal/todogotype/ent/verysecret"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"

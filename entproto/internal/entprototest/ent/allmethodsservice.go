@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/allmethodsservice"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/allmethodsservice"
 )
 
 // AllMethodsService is the model entity for the AllMethodsService schema.

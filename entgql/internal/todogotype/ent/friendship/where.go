@@ -19,9 +19,9 @@ package friendship
 import (
 	"time"
 
-	"entgo.io/contrib/entgql/internal/todogotype/ent/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/dmalykh/entcontrib/entgql/internal/todogotype/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.

@@ -20,7 +20,7 @@ package main
 import (
 	"log"
 
-	"entgo.io/contrib/entproto"
+	"github.com/dmalykh/entcontrib/entproto"
 	"entgo.io/ent/entc"
 	"entgo.io/ent/entc/gen"
 )

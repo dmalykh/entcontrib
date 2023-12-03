@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/twomethodservice"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/twomethodservice"
 )
 
 // TwoMethodService is the model entity for the TwoMethodService schema.

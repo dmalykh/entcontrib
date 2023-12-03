@@ -9,22 +9,22 @@ import (
 	"log"
 	"reflect"
 
-	"entgo.io/contrib/entproto/internal/todo/ent/migrate"
 	"entgo.io/ent"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/migrate"
 	"github.com/google/uuid"
 
-	"entgo.io/contrib/entproto/internal/todo/ent/attachment"
-	"entgo.io/contrib/entproto/internal/todo/ent/group"
-	"entgo.io/contrib/entproto/internal/todo/ent/multiwordschema"
-	"entgo.io/contrib/entproto/internal/todo/ent/nilexample"
-	"entgo.io/contrib/entproto/internal/todo/ent/pet"
-	"entgo.io/contrib/entproto/internal/todo/ent/pony"
-	"entgo.io/contrib/entproto/internal/todo/ent/skipedgeexample"
-	"entgo.io/contrib/entproto/internal/todo/ent/todo"
-	"entgo.io/contrib/entproto/internal/todo/ent/user"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/attachment"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/group"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/multiwordschema"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/nilexample"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/pet"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/pony"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/skipedgeexample"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/todo"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/user"
 )
 
 // Client is the client that holds all ent builders.

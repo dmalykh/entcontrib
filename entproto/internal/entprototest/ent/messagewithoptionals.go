@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/messagewithoptionals"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/messagewithoptionals"
 	"github.com/google/uuid"
 )
 

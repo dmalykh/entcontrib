@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"math"
 
-	"entgo.io/contrib/entoas/internal/pets/category"
-	"entgo.io/contrib/entoas/internal/pets/pet"
-	"entgo.io/contrib/entoas/internal/pets/predicate"
+	"github.com/dmalykh/entcontrib/entoas/internal/pets/category"
+	"github.com/dmalykh/entcontrib/entoas/internal/pets/pet"
+	"github.com/dmalykh/entcontrib/entoas/internal/pets/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"

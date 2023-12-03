@@ -8,12 +8,12 @@ import (
 	"fmt"
 	"math"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/image"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/nobackref"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/image"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/nobackref"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/predicate"
 )
 
 // NoBackrefQuery is the builder for querying NoBackref entities.

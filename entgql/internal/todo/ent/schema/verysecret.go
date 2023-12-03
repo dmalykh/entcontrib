@@ -15,10 +15,10 @@
 package schema
 
 import (
-	"entgo.io/contrib/entgql"
 	"entgo.io/ent"
 	"entgo.io/ent/schema"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entgql"
 )
 
 // VerySecret defines the very secret type schema.

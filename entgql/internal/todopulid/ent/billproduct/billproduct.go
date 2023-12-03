@@ -17,8 +17,8 @@
 package billproduct
 
 import (
-	"entgo.io/contrib/entgql/internal/todopulid/ent/schema/pulid"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entgql/internal/todopulid/ent/schema/pulid"
 )
 
 const (

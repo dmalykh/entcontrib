@@ -5,11 +5,11 @@ package ent
 import (
 	"context"
 
-	"entgo.io/contrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/attachment"
-	"entgo.io/contrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/attachment"
+	"github.com/dmalykh/entcontrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/predicate"
 )
 
 // AttachmentDelete is the builder for deleting a Attachment entity.

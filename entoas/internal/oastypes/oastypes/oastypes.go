@@ -5,8 +5,8 @@ package oastypes
 import (
 	"fmt"
 
-	"entgo.io/contrib/entoas/internal/oastypes/schema"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entoas/internal/oastypes/schema"
 	"github.com/google/uuid"
 )
 

@@ -3,7 +3,7 @@
 package todofed
 
 import (
-	"entgo.io/contrib/entgql/internal/todofed/ent/todo"
+	"github.com/dmalykh/entcontrib/entgql/internal/todofed/ent/todo"
 )
 
 type TodoInput struct {

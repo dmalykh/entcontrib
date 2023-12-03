@@ -3,8 +3,8 @@
 package user
 
 import (
-	"entgo.io/contrib/entproto/internal/bare/ent/predicate"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entproto/internal/bare/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.

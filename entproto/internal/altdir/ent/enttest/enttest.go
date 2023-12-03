@@ -5,12 +5,12 @@ package enttest
 import (
 	"context"
 
-	"entgo.io/contrib/entproto/internal/altdir/ent"
+	"github.com/dmalykh/entcontrib/entproto/internal/altdir/ent"
 	// required by schema hooks.
-	_ "entgo.io/contrib/entproto/internal/altdir/ent/runtime"
+	_ "github.com/dmalykh/entcontrib/entproto/internal/altdir/ent/runtime"
 
-	"entgo.io/contrib/entproto/internal/altdir/ent/migrate"
 	"entgo.io/ent/dialect/sql/schema"
+	"github.com/dmalykh/entcontrib/entproto/internal/altdir/ent/migrate"
 )
 
 type (

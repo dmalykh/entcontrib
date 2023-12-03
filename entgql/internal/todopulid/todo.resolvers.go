@@ -23,10 +23,10 @@ import (
 	"fmt"
 	"time"
 
-	"entgo.io/contrib/entgql"
-	"entgo.io/contrib/entgql/internal/todopulid/ent"
-	"entgo.io/contrib/entgql/internal/todopulid/ent/schema/pulid"
-	"entgo.io/contrib/entgql/internal/todopulid/ent/todo"
+	"github.com/dmalykh/entcontrib/entgql"
+	"github.com/dmalykh/entcontrib/entgql/internal/todopulid/ent"
+	"github.com/dmalykh/entcontrib/entgql/internal/todopulid/ent/schema/pulid"
+	"github.com/dmalykh/entcontrib/entgql/internal/todopulid/ent/todo"
 )
 
 // TodosCount is the resolver for the todosCount field.

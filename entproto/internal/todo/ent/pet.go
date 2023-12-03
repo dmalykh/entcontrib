@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/contrib/entproto/internal/todo/ent/pet"
-	"entgo.io/contrib/entproto/internal/todo/ent/user"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/pet"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/user"
 )
 
 // Pet is the model entity for the Pet schema.

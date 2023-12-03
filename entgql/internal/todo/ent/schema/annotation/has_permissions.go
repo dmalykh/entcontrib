@@ -15,7 +15,7 @@
 package annotation
 
 import (
-	"entgo.io/contrib/entgql"
+	"github.com/dmalykh/entcontrib/entgql"
 	"github.com/vektah/gqlparser/v2/ast"
 )
 

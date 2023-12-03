@@ -9,9 +9,9 @@ import (
 	"reflect"
 	"sync"
 
-	"entgo.io/contrib/entoas/internal/pets/category"
-	"entgo.io/contrib/entoas/internal/pets/pet"
-	"entgo.io/contrib/entoas/internal/pets/user"
+	"github.com/dmalykh/entcontrib/entoas/internal/pets/category"
+	"github.com/dmalykh/entcontrib/entoas/internal/pets/pet"
+	"github.com/dmalykh/entcontrib/entoas/internal/pets/user"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"

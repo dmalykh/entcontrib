@@ -7,11 +7,11 @@ import (
 	"errors"
 	"fmt"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/enumwithconflictingvalue"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/enumwithconflictingvalue"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/predicate"
 )
 
 // EnumWithConflictingValueUpdate is the builder for updating EnumWithConflictingValue entities.

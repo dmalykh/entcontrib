@@ -17,8 +17,8 @@
 package verysecret
 
 import (
-	"entgo.io/contrib/entgql/internal/todofed/ent/predicate"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entgql/internal/todofed/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.

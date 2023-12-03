@@ -17,9 +17,9 @@
 package user
 
 import (
-	"entgo.io/contrib/entgql/internal/todopulid/ent/schema/pulid"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
+	"github.com/dmalykh/entcontrib/entgql/internal/todopulid/ent/schema/pulid"
 	"github.com/google/uuid"
 )
 

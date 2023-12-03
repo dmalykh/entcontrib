@@ -5,12 +5,12 @@ package enttest
 import (
 	"context"
 
-	"entgo.io/contrib/entoas/internal/cycle"
+	"github.com/dmalykh/entcontrib/entoas/internal/cycle"
 	// required by schema hooks.
-	_ "entgo.io/contrib/entoas/internal/cycle/runtime"
+	_ "github.com/dmalykh/entcontrib/entoas/internal/cycle/runtime"
 
-	"entgo.io/contrib/entoas/internal/cycle/migrate"
 	"entgo.io/ent/dialect/sql/schema"
+	"github.com/dmalykh/entcontrib/entoas/internal/cycle/migrate"
 )
 
 type (

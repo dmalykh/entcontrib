@@ -6,10 +6,10 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/image"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/nobackref"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/image"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/nobackref"
 	"github.com/google/uuid"
 )
 

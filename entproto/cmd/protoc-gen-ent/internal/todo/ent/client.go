@@ -9,15 +9,15 @@ import (
 	"log"
 	"reflect"
 
-	"entgo.io/contrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/migrate"
 	"entgo.io/ent"
+	"github.com/dmalykh/entcontrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/migrate"
 
-	"entgo.io/contrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/attachment"
-	"entgo.io/contrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/file"
-	"entgo.io/contrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/task"
-	"entgo.io/contrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/user"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/attachment"
+	"github.com/dmalykh/entcontrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/file"
+	"github.com/dmalykh/entcontrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/task"
+	"github.com/dmalykh/entcontrib/entproto/cmd/protoc-gen-ent/internal/todo/ent/user"
 )
 
 // Client is the client that holds all ent builders.

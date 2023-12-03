@@ -5,11 +5,11 @@ package ent
 import (
 	"context"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/messagewithpackagename"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/messagewithpackagename"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/predicate"
 )
 
 // MessageWithPackageNameDelete is the builder for deleting a MessageWithPackageName entity.

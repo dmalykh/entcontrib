@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/contrib/schemast/internal/printtest/ent/user"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/schemast/internal/printtest/ent/user"
 )
 
 // User is the model entity for the User schema.

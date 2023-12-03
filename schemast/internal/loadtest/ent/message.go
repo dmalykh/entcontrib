@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/contrib/schemast/internal/loadtest/ent/message"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/schemast/internal/loadtest/ent/message"
 )
 
 // Message is the model entity for the Message schema.

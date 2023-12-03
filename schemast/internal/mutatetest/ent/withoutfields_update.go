@@ -7,11 +7,11 @@ import (
 	"errors"
 	"fmt"
 
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/predicate"
-	"entgo.io/contrib/schemast/internal/mutatetest/ent/withoutfields"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/schemast/internal/mutatetest/ent/predicate"
+	"github.com/dmalykh/entcontrib/schemast/internal/mutatetest/ent/withoutfields"
 )
 
 // WithoutFieldsUpdate is the builder for updating WithoutFields entities.

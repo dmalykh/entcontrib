@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/contrib/entproto/internal/todo/ent/skipedgeexample"
-	"entgo.io/contrib/entproto/internal/todo/ent/user"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/skipedgeexample"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/user"
 )
 
 // SkipEdgeExample is the model entity for the SkipEdgeExample schema.

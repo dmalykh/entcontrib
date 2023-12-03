@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"math"
 
-	"entgo.io/contrib/entgql/internal/todo/ent/onetomany"
-	"entgo.io/contrib/entgql/internal/todo/ent/predicate"
+	"github.com/dmalykh/entcontrib/entgql/internal/todo/ent/onetomany"
+	"github.com/dmalykh/entcontrib/entgql/internal/todo/ent/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"

@@ -9,12 +9,12 @@ import (
 	"log"
 	"reflect"
 
-	"entgo.io/contrib/schemast/internal/loadtest/ent/migrate"
 	"entgo.io/ent"
+	"github.com/dmalykh/entcontrib/schemast/internal/loadtest/ent/migrate"
 
-	"entgo.io/contrib/schemast/internal/loadtest/ent/message"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/schemast/internal/loadtest/ent/message"
 )
 
 // Client is the client that holds all ent builders.

@@ -9,12 +9,12 @@ import (
 	"log"
 	"reflect"
 
-	"entgo.io/contrib/entproto/internal/bare/ent/migrate"
 	"entgo.io/ent"
+	"github.com/dmalykh/entcontrib/entproto/internal/bare/ent/migrate"
 
-	"entgo.io/contrib/entproto/internal/bare/ent/user"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entproto/internal/bare/ent/user"
 )
 
 // Client is the client that holds all ent builders.

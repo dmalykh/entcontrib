@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/duplicatenumbermessage"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/duplicatenumbermessage"
 )
 
 // DuplicateNumberMessage is the model entity for the DuplicateNumberMessage schema.

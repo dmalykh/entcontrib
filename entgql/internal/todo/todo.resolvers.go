@@ -22,11 +22,11 @@ import (
 	"context"
 	"time"
 
-	"entgo.io/contrib/entgql"
-	"entgo.io/contrib/entgql/internal/todo/ent"
-	"entgo.io/contrib/entgql/internal/todo/ent/category"
-	"entgo.io/contrib/entgql/internal/todo/ent/todo"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entgql"
+	"github.com/dmalykh/entcontrib/entgql/internal/todo/ent"
+	"github.com/dmalykh/entcontrib/entgql/internal/todo/ent/category"
+	"github.com/dmalykh/entcontrib/entgql/internal/todo/ent/todo"
 )
 
 // TodosCount is the resolver for the todosCount field.

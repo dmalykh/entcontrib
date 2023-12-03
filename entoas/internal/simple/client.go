@@ -9,12 +9,12 @@ import (
 	"log"
 	"reflect"
 
-	"entgo.io/contrib/entoas/internal/simple/migrate"
+	"github.com/dmalykh/entcontrib/entoas/internal/simple/migrate"
 	"entgo.io/ent"
 
-	"entgo.io/contrib/entoas/internal/simple/category"
-	"entgo.io/contrib/entoas/internal/simple/pet"
-	"entgo.io/contrib/entoas/internal/simple/user"
+	"github.com/dmalykh/entcontrib/entoas/internal/simple/category"
+	"github.com/dmalykh/entcontrib/entoas/internal/simple/pet"
+	"github.com/dmalykh/entcontrib/entoas/internal/simple/user"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"

@@ -142,7 +142,7 @@ enum CategoryOrderField {
   TODOS_COUNT
 }
 """CategoryStatus is enum for the field status"""
-enum CategoryStatus @goModel(model: "entgo.io/contrib/entgql/internal/todo/ent/category.Status") {
+enum CategoryStatus @goModel(model: "github.com/dmalykh/entcontrib/entgql/internal/todo/ent/category.Status") {
   ENABLED
   DISABLED
 }
@@ -400,7 +400,7 @@ scalar Map
 An object with an ID.
 Follows the [Relay Global Object Identification Specification](https://relay.dev/graphql/objectidentification.htm)
 """
-interface Node @goModel(model: "entgo.io/contrib/entgql/internal/todo/ent.Noder") {
+interface Node @goModel(model: "github.com/dmalykh/entcontrib/entgql/internal/todo/ent.Noder") {
   """The id of the object."""
   id: ID!
 }
@@ -499,7 +499,7 @@ enum OrderDirection {
   """Specifies a descending order for a given `orderBy` argument."""
   DESC
 }
-type Organization implements Node @goModel(model: "entgo.io/contrib/entgql/internal/todo/ent.Workspace") {
+type Organization implements Node @goModel(model: "github.com/dmalykh/entcontrib/entgql/internal/todo/ent.Workspace") {
   id: ID!
   name: String!
 }
@@ -768,7 +768,7 @@ enum TodoOrderField {
   CATEGORY_TEXT
 }
 """TodoStatus is enum for the field status"""
-enum TodoStatus @goModel(model: "entgo.io/contrib/entgql/internal/todo/ent/todo.Status") {
+enum TodoStatus @goModel(model: "github.com/dmalykh/entcontrib/entgql/internal/todo/ent/todo.Status") {
   IN_PROGRESS
   COMPLETED
   PENDING

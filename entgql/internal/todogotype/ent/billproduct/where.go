@@ -17,8 +17,8 @@
 package billproduct
 
 import (
-	"entgo.io/contrib/entgql/internal/todogotype/ent/predicate"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entgql/internal/todogotype/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.

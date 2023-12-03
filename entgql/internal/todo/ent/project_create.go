@@ -20,8 +20,8 @@ import (
 	"context"
 	"fmt"
 
-	"entgo.io/contrib/entgql/internal/todo/ent/project"
-	"entgo.io/contrib/entgql/internal/todo/ent/todo"
+	"github.com/dmalykh/entcontrib/entgql/internal/todo/ent/project"
+	"github.com/dmalykh/entcontrib/entgql/internal/todo/ent/todo"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
 )

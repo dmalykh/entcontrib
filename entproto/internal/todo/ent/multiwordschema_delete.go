@@ -5,11 +5,11 @@ package ent
 import (
 	"context"
 
-	"entgo.io/contrib/entproto/internal/todo/ent/multiwordschema"
-	"entgo.io/contrib/entproto/internal/todo/ent/predicate"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/multiwordschema"
+	"github.com/dmalykh/entcontrib/entproto/internal/todo/ent/predicate"
 )
 
 // MultiWordSchemaDelete is the builder for deleting a MultiWordSchema entity.

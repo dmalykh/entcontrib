@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"strings"
 
-	"entgo.io/contrib/entgql/internal/todo/ent/project"
+	"github.com/dmalykh/entcontrib/entgql/internal/todo/ent/project"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
 )

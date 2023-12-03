@@ -21,8 +21,8 @@ package todofed
 import (
 	"context"
 
-	"entgo.io/contrib/entgql"
-	"entgo.io/contrib/entgql/internal/todofed/ent"
+	"github.com/dmalykh/entcontrib/entgql"
+	"github.com/dmalykh/entcontrib/entgql/internal/todofed/ent"
 )
 
 // CreateTodo is the resolver for the createTodo field.

@@ -17,9 +17,9 @@
 package pet
 
 import (
-	"entgo.io/contrib/entgql/internal/todogotype/ent/predicate"
-	"entgo.io/contrib/entgql/internal/todogotype/ent/schema/uintgql"
 	"entgo.io/ent/dialect/sql"
+	"github.com/dmalykh/entcontrib/entgql/internal/todogotype/ent/predicate"
+	"github.com/dmalykh/entcontrib/entgql/internal/todogotype/ent/schema/uintgql"
 )
 
 // ID filters vertices based on their ID field.

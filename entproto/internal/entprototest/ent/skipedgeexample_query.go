@@ -7,12 +7,12 @@ import (
 	"fmt"
 	"math"
 
-	"entgo.io/contrib/entproto/internal/entprototest/ent/predicate"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/skipedgeexample"
-	"entgo.io/contrib/entproto/internal/entprototest/ent/user"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/predicate"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/skipedgeexample"
+	"github.com/dmalykh/entcontrib/entproto/internal/entprototest/ent/user"
 )
 
 // SkipEdgeExampleQuery is the builder for querying SkipEdgeExample entities.

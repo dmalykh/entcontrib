@@ -15,10 +15,10 @@
 package schema
 
 import (
-	"entgo.io/contrib/entproto"
 	"entgo.io/ent"
 	"entgo.io/ent/schema"
 	"entgo.io/ent/schema/edge"
+	"github.com/dmalykh/entcontrib/entproto"
 )
 
 // NoBackref is an entity with an edge to an entity that doesn't refer back to it.

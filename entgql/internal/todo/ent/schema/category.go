@@ -17,14 +17,14 @@ package schema
 import (
 	"time"
 
-	"entgo.io/contrib/entgql"
 	"entgo.io/ent"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/schema"
 	"entgo.io/ent/schema/edge"
 	"entgo.io/ent/schema/field"
+	"github.com/dmalykh/entcontrib/entgql"
 
-	"entgo.io/contrib/entgql/internal/todo/ent/schema/schematype"
+	"github.com/dmalykh/entcontrib/entgql/internal/todo/ent/schema/schematype"
 )
 
 // Category holds the schema definition for the Category entity.

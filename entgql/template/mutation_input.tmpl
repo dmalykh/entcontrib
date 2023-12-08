@@ -32,7 +32,7 @@ import (
             {{- if $f.ClearOp }}
                 {{ print "Clear" $f.StructField }} bool
             {{- end }}
-            {{ $f.StructField }} {{ if $f.IsPointer }}*{{ end }}{{ $f.Type }}
+            {{ $f.StructField }} {{ if $f.IsPointer }}*{{ end }}{{ $f.Type }} {{ if $f.StructTag }}`{{ $f.StructTag }}`{{ end }}
             {{- if $f.AppendOp }}
                 {{ $f.MutationAppend }} {{ if $f.IsPointer }}*{{ end }}{{ $f.Type }}
             {{- end }}

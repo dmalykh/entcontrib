@@ -45,7 +45,12 @@ func (Category) Fields() []ent.Field {
 			NotEmpty().
 			Annotations(
 				entgql.OrderField("TEXT"),
+				entgql.Directives(
+					entgql.Deprecated("use description"),
+				),
 			),
+		field.Text("description").
+			NotEmpty(),
 		field.Enum("status").
 			NamedValues(
 				"Enabled", "ENABLED",

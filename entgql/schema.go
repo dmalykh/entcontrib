@@ -97,7 +97,7 @@ type schemaGenerator struct {
 	path          string
 	relaySpec     bool
 	genSchema     bool
-	genEmptyQuery bool	
+	genEmptyQuery bool
 	genWhereInput bool
 	genMutations  bool
 
@@ -260,8 +260,8 @@ func (e *schemaGenerator) buildTypes(g *gen.Graph, s *ast.Schema) error {
 
 	if e.genSchema && len(queryFields) > 0 && e.genEmptyQuery == false {
 		s.AddTypes(&ast.Definition{
-			Name:   QueryType,
-			Kind:   ast.Object,
+			Name: QueryType,
+			Kind: ast.Object,
 		})
 	}
 
@@ -587,6 +587,7 @@ func (e *schemaGenerator) buildMutationInputs(t *gen.Type, ant *Annotation, gqlT
 				Name:        camel(f.Name),
 				Type:        namedType(scalar, f.Nullable),
 				Description: f.Comment(),
+				Directives:  e.buildDirectives(ant.Directives),
 			})
 			if f.AppendOp {
 				def.Fields = append(def.Fields, &ast.FieldDefinition{

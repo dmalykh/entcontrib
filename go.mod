@@ -9,6 +9,7 @@ require (
 	github.com/alecthomas/kong v0.7.0
 	github.com/go-openapi/inflect v0.19.0
 	github.com/google/uuid v1.3.0
+	github.com/hashicorp/go-bexpr v0.1.13
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/jhump/protoreflect v1.10.1
 	github.com/mattn/go-sqlite3 v1.14.16
@@ -16,7 +17,7 @@ require (
 	github.com/ogen-go/ogen v0.56.1
 	github.com/oklog/ulid/v2 v2.0.2
 	github.com/stoewer/go-strcase v1.2.0
-	github.com/stretchr/testify v1.8.2
+	github.com/stretchr/testify v1.8.4
 	github.com/vektah/gqlparser/v2 v2.5.8
 	github.com/vmihailenco/msgpack/v5 v5.0.0-beta.9
 	go.uber.org/multierr v1.9.0
@@ -50,6 +51,7 @@ require (
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/mitchellh/go-wordwrap v0.0.0-20150314170334-ad45545899c7 // indirect
+	github.com/mitchellh/pointerstructure v1.2.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/segmentio/asm v1.2.0 // indirect
 	github.com/stretchr/objx v0.5.0 // indirect

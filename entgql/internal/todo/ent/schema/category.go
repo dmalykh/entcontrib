@@ -15,6 +15,7 @@
 package schema
 
 import (
+	"github.com/dmalykh/entcontrib/entgql/internal/todo/ent/schema/annotation"
 	"time"
 
 	"entgo.io/ent"
@@ -47,6 +48,7 @@ func (Category) Fields() []ent.Field {
 				entgql.OrderField("TEXT"),
 				entgql.Directives(
 					entgql.Deprecated("use description"),
+					annotation.Validation(`min=100`),
 				),
 			),
 		field.Text("description").

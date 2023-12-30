@@ -25,6 +25,7 @@ import (
 	"entgo.io/ent/schema/field"
 	"github.com/99designs/gqlgen/codegen/config"
 	"github.com/99designs/gqlgen/codegen/templates"
+	"github.com/hashicorp/go-bexpr"
 	"github.com/vektah/gqlparser/v2/ast"
 	"github.com/vektah/gqlparser/v2/formatter"
 )
@@ -214,7 +215,9 @@ func (e *schemaGenerator) buildTypes(g *gen.Graph, s *ast.Schema) error {
 
 					def := names.ConnectionField(name, hasOrderBy, ant.MultiOrder, hasWhereInput)
 					def.Description = ant.QueryField.Description
-					def.Directives = e.buildDirectives(ant.QueryField.Directives)
+					def.Directives = e.buildDirectives(ant.QueryField.Directives, &DirectiveConstrain{
+						Kind: ConnectionFieldKind,
+					})
 					queryFields = append(queryFields, def)
 				}
 			} else if ant.QueryField != nil {
@@ -224,7 +227,9 @@ func (e *schemaGenerator) buildTypes(g *gen.Graph, s *ast.Schema) error {
 					Description: ant.QueryField.Description,
 					Type:        listNamedType(gqlType, false),
 				}
-				def.Directives = e.buildDirectives(ant.QueryField.Directives)
+				def.Directives = e.buildDirectives(ant.QueryField.Directives, &DirectiveConstrain{
+					Kind: QueryFieldKind,
+				})
 				queryFields = append(queryFields, def)
 			}
 		}
@@ -307,9 +312,11 @@ func (e *schemaGenerator) externalType(name string) bool {
 
 func (e *schemaGenerator) buildType(t *gen.Type, ant *Annotation, gqlType, pkg string) (*ast.Definition, error) {
 	def := &ast.Definition{
-		Name:       gqlType,
-		Kind:       ast.Object,
-		Directives: e.buildDirectives(ant.Directives),
+		Name: gqlType,
+		Kind: ast.Object,
+		Directives: e.buildDirectives(ant.Directives, &DirectiveConstrain{
+			Kind: ObjectKind,
+		}),
 	}
 	if t.Name != gqlType {
 		def.Directives = append(def.Directives, goModel(entGoType(t.Name, pkg)))
@@ -364,9 +371,25 @@ func (e *schemaGenerator) buildType(t *gen.Type, ant *Annotation, gqlType, pkg s
 	return def, nil
 }
 
-func (e *schemaGenerator) buildDirectives(directives []Directive) ast.DirectiveList {
+func (e *schemaGenerator) buildDirectives(directives []Directive, dc *DirectiveConstrain) ast.DirectiveList {
 	list := make(ast.DirectiveList, 0, len(directives))
 	for _, d := range directives {
+		if d.Constrain != "" && dc != nil {
+			program, err := bexpr.CreateEvaluator(string(d.Constrain))
+			if err != nil {
+				panic(err)
+			}
+
+			allow, err := program.Evaluate(dc)
+			if err != nil {
+				panic(err)
+			}
+
+			if !allow {
+				continue
+			}
+		}
+
 		list = append(list, &ast.Directive{
 			Name:      d.Name,
 			Arguments: d.Arguments,
@@ -462,7 +485,9 @@ func (e *schemaGenerator) buildEdge(node *gen.Type, edge *gen.Edge, edgeAnt *Ann
 			fieldDef.Type = listNamedType(gqlType, edge.Optional)
 		}
 
-		fieldDef.Directives = e.buildDirectives(edgeAnt.Directives)
+		fieldDef.Directives = e.buildDirectives(edgeAnt.Directives, &DirectiveConstrain{
+			Kind: EdgeKind,
+		})
 		if goFieldName != templates.ToGo(name) {
 			fieldDef.Directives = append(fieldDef.Directives, goField(structField))
 		}
@@ -587,7 +612,9 @@ func (e *schemaGenerator) buildMutationInputs(t *gen.Type, ant *Annotation, gqlT
 				Name:        camel(f.Name),
 				Type:        namedType(scalar, f.Nullable),
 				Description: f.Comment(),
-				Directives:  e.buildDirectives(ant.Directives),
+				Directives: e.buildDirectives(ant.Directives, &DirectiveConstrain{
+					Kind: InputObjectKind,
+				}),
 			})
 			if f.AppendOp {
 				def.Fields = append(def.Fields, &ast.FieldDefinition{
@@ -656,7 +683,9 @@ func (e *schemaGenerator) fieldDefinitions(gqlType string, f *gen.Field, ant *An
 			Name:        name,
 			Type:        ft,
 			Description: f.Comment(),
-			Directives:  e.buildDirectives(ant.Directives),
+			Directives: e.buildDirectives(ant.Directives, &DirectiveConstrain{
+				Kind: QueryFieldKind,
+			}),
 		}
 		// We check the field name with gqlgen's naming convention.
 		// To avoid unnecessary @goField directives

@@ -53,10 +53,20 @@ type (
 		MutationInputs []MutationConfig `json:"MutationInputs,omitempty"`
 	}
 
+	// ConstrainExpr uses https://github.com/hashicorp/go-bexpr with DirectiveConstrain as input
+	ConstrainExpr string
+
 	// Directive to apply on the field/type.
 	Directive struct {
 		Name      string          `json:"name,omitempty"`
 		Arguments []*ast.Argument `json:"arguments,omitempty"`
+		Constrain ConstrainExpr   `json:"constrain,omitempty"`
+	}
+
+	DefinitionKind string
+
+	DirectiveConstrain struct {
+		Kind DefinitionKind
 	}
 
 	// SkipMode is a bit flag for the Skip annotation.
@@ -104,6 +114,12 @@ const (
 		SkipWhereInput |
 		SkipMutationCreateInput |
 		SkipMutationUpdateInput
+
+	InputObjectKind     DefinitionKind = `INPUT_OBJECT`
+	ConnectionFieldKind DefinitionKind = `CONNECTION_FIELD`
+	QueryFieldKind      DefinitionKind = `QUERY_FIELD`
+	ObjectKind          DefinitionKind = `OBJECT`
+	EdgeKind            DefinitionKind = `EDGE`
 )
 
 // Name implements ent.Annotation interface.
@@ -546,6 +562,18 @@ func NewDirective(name string, args ...*ast.Argument) Directive {
 	return Directive{
 		Name:      name,
 		Arguments: args,
+	}
+}
+
+// NewConstrainDirective returns a GraphQL directive
+// to use with the entgql.Directives annotation.
+// expr is conditional expression uses https://github.com/hashicorp/go-bexpr with with DirectiveConstrain as input
+// for constrain directives generation for fields
+func NewConstrainDirective(name string, expr ConstrainExpr, args ...*ast.Argument) Directive {
+	return Directive{
+		Name:      name,
+		Arguments: args,
+		Constrain: expr,
 	}
 }
 

@@ -178,9 +178,10 @@ func WithNodeDescriptor(b bool) ExtensionOption {
 }
 
 // WithRelaySpec enables or disables generating the Relay Node interface.
-func WithRelaySpec(enabled bool) ExtensionOption {
+func WithRelaySpec(enabled bool, directives map[string][]Directive) ExtensionOption {
 	return func(e *Extension) error {
 		e.relaySpec = enabled
+		e.relayDirectives = directives
 		return nil
 	}
 }
@@ -200,7 +201,6 @@ func WithEmptyQueryGenerator() ExtensionOption {
 		return nil
 	}
 }
-
 
 // WithMapScalarFunc allows users to provide a custom function that
 // maps an ent.Field (*gen.Field) into its GraphQL scalar type. If the

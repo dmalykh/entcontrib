@@ -95,12 +95,13 @@ var (
 )
 
 type schemaGenerator struct {
-	path          string
-	relaySpec     bool
-	genSchema     bool
-	genEmptyQuery bool
-	genWhereInput bool
-	genMutations  bool
+	path            string
+	relaySpec       bool
+	relayDirectives map[string][]Directive
+	genSchema       bool
+	genEmptyQuery   bool
+	genWhereInput   bool
+	genMutations    bool
 
 	cfg         *config.Config
 	scalarFunc  func(*gen.Field, gen.Op) string
@@ -114,7 +115,18 @@ func (e *schemaGenerator) BuildSchema(g *gen.Graph) (s *ast.Schema, err error) {
 	if e.genSchema {
 		s.AddTypes(builtinTypes()...)
 		if e.relaySpec {
-			s.AddTypes(relayBuiltinTypes(g.Package)...)
+			var relayTypes = relayBuiltinTypes(g.Package)
+			for i := range relayTypes {
+				directives, exists := e.relayDirectives[relayTypes[i].Name]
+				if !exists {
+					continue
+				}
+
+				relayTypes[i].Directives = e.buildDirectives(directives, &DirectiveConstrain{
+					Kind: ObjectKind,
+				})
+			}
+			s.AddTypes(relayTypes...)
 		}
 		for name, d := range directives {
 			s.Directives[name] = d

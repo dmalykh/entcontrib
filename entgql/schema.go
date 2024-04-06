@@ -113,21 +113,22 @@ func (e *schemaGenerator) BuildSchema(g *gen.Graph) (s *ast.Schema, err error) {
 		Directives: make(map[string]*ast.DirectiveDefinition),
 	}
 	if e.genSchema {
-		s.AddTypes(builtinTypes()...)
+		var types = builtinTypes()
 		if e.relaySpec {
-			var relayTypes = relayBuiltinTypes(g.Package)
-			for i := range relayTypes {
-				directives, exists := e.relayDirectives[relayTypes[i].Name]
+			types = append(types, relayBuiltinTypes(g.Package)...)
+			for i := range types {
+				directives, exists := e.relayDirectives[types[i].Name]
 				if !exists {
 					continue
 				}
 
-				relayTypes[i].Directives = e.buildDirectives(directives, &DirectiveConstrain{
+				types[i].Directives = e.buildDirectives(directives, &DirectiveConstrain{
 					Kind: ObjectKind,
 				})
 			}
-			s.AddTypes(relayTypes...)
 		}
+
+		s.AddTypes(types...)
 		for name, d := range directives {
 			s.Directives[name] = d
 		}
